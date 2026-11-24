@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: rag-tenant-guard
+Version: 0.1.0
+Summary: Strict cross-tenant isolation and PII redaction boundary layer for RAG pipelines.
+Author: Andrea Fiorletta
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# rag-tenant-guard
+A new python project!
+Structure:
+rag-tenant-guard/
+├── .github/
+│   └── workflows/
+│       └── ci.yml              # Lancia ruff, mypy e pytest a ogni push
+├── src/
+│   └── rag_tenant_guard/
+│       ├── __init__.py
+│       ├── models.py           # TenantContext, DocumentChunk, GuardResult
+│       ├── isolation.py        # Regole di isolamento stretto tra tenant
+│       ├── pii.py              # Rilevamento e redazione PII
+│       ├── guard.py            # Orchestratore principale della pipeline
+│       └── cli.py              # Entrypoint da terminale
+├── tests/
+│   ├── test_isolation.py
+│   ├── test_pii.py
+│   └── test_guard_adversarial.py
+├── pyproject.toml              # Configurazione unica del progetto
+└── README.md
