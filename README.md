@@ -103,5 +103,3 @@ mypy src
 pytest
 Roadmap[x] Phase 1: Project scaffolding, pyproject.toml, ruff & mypy --strict setup[x] Phase 2: Immutable boundary models (models.py)[ ] Phase 3: Cross-tenant & scope isolation engine (isolation.py)[ ] Phase 4: PII detection & redaction engine (pii.py)[ ] Phase 5: Pipeline orchestrator, adversarial test suite, CLI & GitHub Actions CILicenseDistributed under the MIT License. See LICENSE for details.
 *(Nota: il badge della CI diventerà verde automaticamente appena aggiungeremo `.github/workflows/ci.yml` nella Fase 5).*
-
-Appena hai finito di scrivere `isolation.py` e superato `ruff` + `mypy`, incollalo qui e facc
