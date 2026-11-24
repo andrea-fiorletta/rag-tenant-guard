@@ -1,4 +1,4 @@
-<div align="center">
+
 
 # 🛡️ rag-tenant-guard
 
@@ -36,7 +36,6 @@ In multi-tenant RAG systems, vector databases and retrieval pipelines are a high
            │
            ▼  (Verified, Redacted Context)
     [ LLM Prompt / Agent ]
-
 Key Security GuaranteesLayerProtectionModeTenant BoundaryEnforces exact tenant_id matching and rejects empty/whitespace-padded identifiers.Filter (strict=False) or Fail-Closed (strict=True)Scope AuthorizationValidates chunk scope metadata against an immutable frozenset of allowed scopes.Opt-in via TenantContext.allowed_scopesPII RedactionDetects and masks sensitive entities (EMAIL, API_KEY, CREDIT_CARD, etc.) before LLM ingestion.Deterministic compiled regex engineZero-Leakage ErrorsExceptions and audit metadata never log raw chunk.content or foreign tenant_id values.Always enforcedImmutable ModelsAll boundary objects use @dataclass(frozen=True, slots=True) to prevent runtime mutation.Always enforcedQuickstartInstallationBashgit clone git@github.com:andrea-fiorletta/rag-tenant-guard.git
 cd rag-tenant-guard
 python -m venv .venv
@@ -103,6 +102,3 @@ mypy src
 # Run test suite
 pytest
 Roadmap[x] Phase 1: Project scaffolding, pyproject.toml, ruff & mypy --strict setup[x] Phase 2: Immutable boundary models (models.py)[ ] Phase 3: Cross-tenant & scope isolation engine (isolation.py)[ ] Phase 4: PII detection & redaction engine (pii.py)[ ] Phase 5: Pipeline orchestrator, adversarial test suite, CLI & GitHub Actions CILicenseDistributed under the MIT License. See LICENSE for details.
-*(Nota: il badge della CI diventerà verde automaticamente appena aggiungeremo `.github/workflows/ci.yml` nella Fase 5).*
-
-Appena hai finito di scrivere `isolation.py` e superato `ruff` + `mypy`, incollalo qui e facc
